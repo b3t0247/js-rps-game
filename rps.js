@@ -23,7 +23,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         return 'Player: ' + playerSelection + '\n' + 'Computer: ' + computerSelection + '\n' + 'Computer Wins!';
     } else {
-        return 'It\'s a draw!'
+        return 'It\'s a draw! ' + '\n' + 'Player = ' + playerSelection + '\n' + 'Computer = ' + computerSelection;
     }
 }
 
@@ -35,9 +35,14 @@ function game() {
         // Call playRound function, passing in newly returned values
         // from playRound and computerPlay functions
         const currentRound = playRound(playerSelection, computerSelection);
-        // Log result
+        // Log result to console and HTML
         console.log(currentRound);
-        // document.getElementById('score').innerHTML = currentRound;
+        const result = document.getElementById("result").innerHTML = playRound(playerSelection, computerSelection);
+        const computer = document.getElementById("computer").innerHTML = 'Computer = ' + computerSelection;
+        const player = document.getElementById("player").innerHTML = 'Player = ' + playerSelection;
+        return {
+            result, computer, player
+        };
     }
 }
 
@@ -45,10 +50,10 @@ let play = document.getElementById('play');
 
 play.addEventListener('click', function() {
     let startGame = document.getElementById('score').innerHTML = game();
-    return startGame;
+    // return document.getElementById('score').innerHTML = game();
 })
 
-// Testing area //
+// Test area //
 
 // let counter = 0
 // setInterval(() => {
@@ -57,10 +62,10 @@ play.addEventListener('click', function() {
 //     console.log(counter)
 // }, 1000);
 
-document.getElementById('result').innerHTML = playRound(playerSelection, computerSelection);
-document.getElementById("computer").innerHTML = 'Computer = ' + computerSelection;
-document.getElementById('player').innerHTML = 'Player = ' + playerSelection;
-document.getElementById('score').innerHTML = game();
+// document.getElementById('result').innerHTML = playRound(playerSelection, computerSelection);
+// document.getElementById("computer").innerHTML = 'Computer = ' + computerSelection;
+// document.getElementById('player').innerHTML = 'Player = ' + playerSelection;
+// document.getElementById('score').innerHTML = game();
 
 // console.log(playRound(playerSelection, computerSelection));
 // console.log(computerSelection);
