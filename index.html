@@ -8,21 +8,30 @@
     <link rel="stylesheet" type="text/css" href="./styles.css" />
   </head>
   <body>
+    <div>
+      <h5>Score</h5>
+      <p id="score"></p>
+      
+      <h5>Result</h5>
+      <p id="result"></p>
 
-    <h5>Score</h5>
-    <p id="score"></p>
+      <h5>Player</h5>
+      <p id="player"></p>
+          
+      <h5>Computer</h5>
+      <p id="computer"></p>
 
-    <h5>Result</h5>
-    <p id="result"></p>
+      <form id="form" onsubmit="return false;">
+        <input type="text" id="playerChoice" placeholder="Choices: rock, paper or scissors" /><br />
+        <!-- <input type="submit" id="play" value="Play" onclick="document.getElementById('playerChoice').value = ''" /> -->
+        <input type="submit" id="playerChoice" value="rock" /><br />
+        <input type="submit" id="playerChoice" value="paper" /><br />
+        <input type="submit" id="playerChoice" value="scissors" /><br />
+        <input type="submit" id="play" value="Play" /><br />
+      </form>
 
-    <h5>Player</h5>
-    <p id="player"></p>
-    <input />
-
-    <h5>Computer</h5>
-    <p id="computer"></p>
-
-    <button type="submit" id="play">Play</button>
+      <!-- <button type="submit" id="play">Play</button> -->
+    </div>
     <script src="./rps.js"></script>
   </body>
 </html>
