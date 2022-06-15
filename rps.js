@@ -21,22 +21,6 @@ function computerPlay () {
 
 // rock beats scissors, scissors beat paper by cutting it, and paper beats rock by covering it.
 function playRound(playerSelection, computerSelection) {
-    // if (playerSelection === 'rock' && computerSelection === 'paper') {
-    //     return 'Player: ' + playerSelection + '\n' + 'Computer: ' + computerSelection + '\n' + 'Computer Wins!';
-    // } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-    //     return 'Player: ' + playerSelection + '\n' + 'Computer: ' + computerSelection + '\n' + 'Player Wins!';
-    // } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-    //     return 'Player: ' + playerSelection + '\n' + 'Computer: ' + computerSelection + '\n' + 'Player Wins!';
-    // } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-    //     return 'Player: ' + playerSelection + '\n' + 'Computer: ' + computerSelection + '\n' + 'Computer Wins!';
-    // } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-    //     return 'Player: ' + playerSelection + '\n' + 'Computer: ' + computerSelection + '\n' + 'Player Wins!';
-    // } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-    //     return 'Player: ' + playerSelection + '\n' + 'Computer: ' + computerSelection + '\n' + 'Computer Wins!';
-    // } else {
-    //     return 'It\'s a draw! ' + '\n' + 'Player = ' + playerSelection + '\n' + 'Computer = ' + computerSelection;
-    // }
-
     if (playerSelection === 'rock' && computerSelection === 'paper') {
         return 'Computer Wins!';
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
@@ -82,15 +66,6 @@ play.addEventListener('click', function() {
     // let startGame = document.getElementById('score').innerHTML = game();
     return startGame;
 })
-
-// let rock = document.getElementById('rock');
-
-// rock.addEventListener('click', function() {
-//     let startGame = game();
-//     // let startGame = document.getElementById('score').innerHTML = game();
-//     return startGame;
-// })
-
 
 // Test area //
 
