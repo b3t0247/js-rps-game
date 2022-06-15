@@ -4,14 +4,12 @@ html {
 
 *, *:before, *:after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 p {
-    border: 2px solid blue;
-    width: 400px;
-    height: 60px;
-}
-
-input {
-    width: 400px;
+    border: 1px solid black;
+    width: 200px;
+    height: 30px;
 }
