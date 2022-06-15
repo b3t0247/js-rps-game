@@ -1,17 +1,15 @@
-// const playerSelection = computerPlay();
-const playerSelection = playerChoice();
+// const playerSelection = playerChoice();
 const computerSelection = computerPlay();
+const playerSelection = '';
 
 // function playerChoice() {
-//     let choice = document.getElementById("playerChoice").value;
-//     return choice;
+//     playerSelection = document.getElementById("choice").value;
+//     console.log(playerSelection);
 // }
 
 function playerChoice() {
-    var 
-    if () {
-
-    }
+    let choice = document.getElementById("playerChoice").value;
+    return choice;
 }
 
 function computerPlay () {
