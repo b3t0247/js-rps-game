@@ -18,8 +18,8 @@ function playerChoice() {
 }
 
 function computerPlay () {
-    let arrayItems = ['rock', 'paper', 'scissors'];
-    let randomChoice = arrayItems[Math.floor(Math.random() * arrayItems.length)];
+    const arrayItems = ['rock', 'paper', 'scissors'];
+    const randomChoice = arrayItems[Math.floor(Math.random() * arrayItems.length)];
     // return randomChoice[Math.floor(Math.random() * randomChoice.length)];
     return randomChoice;
 }
@@ -45,26 +45,48 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     for (let i = 0; i < 5; i++) {
-        // const playerSelection = computerPlay();
         const playerSelection = playerChoice();
         const computerSelection = computerPlay();
         // Call playRound function, passing in newly returned values
         // from playRound and computerPlay functions
         const currentRound = playRound(playerSelection, computerSelection);
         // Log result to HTML element and console
-        // console.log(playerSelection); // "rock" | "paper" | "scissors"
-        // console.log(computerSelection); // "rock" | "paper" | "scissors"
-        const result = document.getElementById("result").innerHTML = playRound(playerSelection, computerSelection);
-        const computer = document.getElementById("computer").innerHTML = 'Computer = ' + computerSelection;
-        const player = document.getElementById("player").innerHTML = 'Player = ' + playerSelection;
+        const result = document.getElementById("result").innerHTML =
+                playRound(playerSelection, computerSelection);
+        const computer = document.getElementById("computer").innerHTML =
+                'Computer = ' + computerSelection;
+        const player = document.getElementById("player").innerHTML =
+                'Player = ' + playerSelection;
         console.log(currentRound);  // "Computer Wins!" | "Player Wins!" | "It's a draw! "
         console.log(player);
         console.log(computer);
+        // console.count();
         return {
             result, computer, player
         };
-    }
-}
+    }   
+} 
+
+// function game() {
+//     const playerSelection = playerChoice();
+//     const computerSelection = computerPlay();
+//     const currentRound = playRound(playerSelection, computerSelection);
+//     // const result = document.getElementById("result").innerHTML = playRound(playerSelection, computerSelection);
+//     // const computer = document.getElementById("computer").innerHTML = 'Computer = ' + computerSelection;
+//     const player = document.getElementById("player").innerHTML = 'Player = ' + playerSelection;
+//     console.log(currentRound);
+//     console.log(player);
+//     // console.log(computer);
+//     let round = 0;
+//     for (let i = 0; i < 5; i++) {
+//         round += currentRound.i;
+//         console.log(i);
+//         // console.log(i);
+//     }   
+//     return {
+//         result, computer, player
+//     };
+// } 
 
 let play = document.getElementById('play');
 
@@ -72,22 +94,3 @@ play.addEventListener('click', function() {
     let startGame = game();
     return startGame;
 })
-
-// Test area //
-
-// let counter = 0
-// setInterval(() => {
-//     // counter++
-//     document.getElementById('score').innerHTML = counter++;
-//     console.log(counter)
-// }, 1000);
-
-// document.getElementById('result').innerHTML = playRound(playerSelection, computerSelection);
-// document.getElementById("computer").innerHTML = 'Computer = ' + computerSelection;
-// document.getElementById('player').innerHTML = 'Player = ' + playerSelection;
-// document.getElementById('score').innerHTML = game();
-
-// console.log(playRound(playerSelection, computerSelection));
-// console.log(computerSelection);
-// console.log(playerSelection);
-// console.log(game());
