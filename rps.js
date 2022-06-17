@@ -19,6 +19,7 @@ function playerChoice() {
 
 function computerPlay () {
     const arrayItems = ['rock', 'paper', 'scissors'];
+    // console.log(arrayItems instanceof Array);
     const randomChoice = arrayItems[Math.floor(Math.random() * arrayItems.length)];
     // return randomChoice[Math.floor(Math.random() * randomChoice.length)];
     return randomChoice;
@@ -43,50 +44,50 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+// function game() {
+//     for (let i = 0; i < 5; i++) {
+//         const playerSelection = playerChoice();
+//         const computerSelection = computerPlay();
+//         // Call playRound function, passing in newly returned values
+//         // from playRound and computerPlay functions
+//         const currentRound = playRound(playerSelection, computerSelection);
+//         // Log result to HTML element and console
+//         const result = document.getElementById("result").innerHTML =
+//                 playRound(playerSelection, computerSelection);
+//         const computer = document.getElementById("computer").innerHTML =
+//                 'Computer = ' + computerSelection;
+//         const player = document.getElementById("player").innerHTML =
+//                 'Player = ' + playerSelection;
+//         console.log(currentRound);  // "Computer Wins!" | "Player Wins!" | "It's a draw! "
+//         console.log(player);
+//         console.log(computer);
+//         // console.count();
+//         return {
+//             result, computer, player
+//         };
+//     }   
+// } 
+
 function game() {
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = playerChoice();
-        const computerSelection = computerPlay();
-        // Call playRound function, passing in newly returned values
-        // from playRound and computerPlay functions
-        const currentRound = playRound(playerSelection, computerSelection);
-        // Log result to HTML element and console
-        const result = document.getElementById("result").innerHTML =
-                playRound(playerSelection, computerSelection);
-        const computer = document.getElementById("computer").innerHTML =
-                'Computer = ' + computerSelection;
-        const player = document.getElementById("player").innerHTML =
-                'Player = ' + playerSelection;
-        console.log(currentRound);  // "Computer Wins!" | "Player Wins!" | "It's a draw! "
+    let round = '';
+    const playerSelection = playerChoice();
+    const currentRound = playRound(playerSelection, computerSelection);
+    for (let i = 1; i < 6; i++) {
+        // if ( i !== 6) {
+        round += i;
+        document.getElementById('round').innerHTML = round;
+        // document.getElementById('score').innerHTML = currentRound;
+        // const result = document.getElementById("result").innerHTML = playRound(playerSelection, computerSelection);
+        document.getElementById("result").innerHTML = currentRound;
+        const computer = document.getElementById("computer").innerHTML = 'Computer = ' + computerSelection;
+        const player = document.getElementById("player").innerHTML = 'Player = ' + playerSelection;
+        console.log(currentRound);
         console.log(player);
         console.log(computer);
-        // console.count();
-        return {
-            result, computer, player
-        };
-    }   
+        // console.log(round);
+        // }
+    } 
 } 
-
-// function game() {
-//     const playerSelection = playerChoice();
-//     const computerSelection = computerPlay();
-//     const currentRound = playRound(playerSelection, computerSelection);
-//     // const result = document.getElementById("result").innerHTML = playRound(playerSelection, computerSelection);
-//     // const computer = document.getElementById("computer").innerHTML = 'Computer = ' + computerSelection;
-//     const player = document.getElementById("player").innerHTML = 'Player = ' + playerSelection;
-//     console.log(currentRound);
-//     console.log(player);
-//     // console.log(computer);
-//     let round = 0;
-//     for (let i = 0; i < 5; i++) {
-//         round += currentRound.i;
-//         console.log(i);
-//         // console.log(i);
-//     }   
-//     return {
-//         result, computer, player
-//     };
-// } 
 
 let play = document.getElementById('play');
 
