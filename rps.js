@@ -88,7 +88,7 @@ function game() {
 //     };
 // } 
 
-let play = document.getElementById('play');
+var play = document.getElementById('play');
 
 play.addEventListener('click', function() {
     let startGame = game();
