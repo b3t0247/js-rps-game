@@ -15,6 +15,7 @@ function playerChoice() {
         // console.log(playerSelection);
     }, false);
     return playerSelection;
+    
 }
 
 function computerPlay () {
@@ -39,9 +40,10 @@ function playRound(playerSelection, computerSelection) {
         return 'Player Wins!';
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         return 'Computer Wins!';
-    } else {
+    } else if (playerSelection === computerSelection){
         return 'It\'s a draw! ';
-    }
+    } else
+    return `${playerSelection} + ${computerSelection}`;
 }
 
 // function game() {
@@ -71,11 +73,11 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     let round = '';
     const playerSelection = playerChoice();
+    const computerSelection = computerPlay();
     const currentRound = playRound(playerSelection, computerSelection);
     for (let i = 1; i < 6; i++) {
-        // if ( i !== 6) {
         round += i;
-        document.getElementById('round').innerHTML = round;
+        // document.getElementById('round').innerHTML = round;
         // document.getElementById('score').innerHTML = currentRound;
         // const result = document.getElementById("result").innerHTML = playRound(playerSelection, computerSelection);
         document.getElementById("result").innerHTML = currentRound;
@@ -85,9 +87,12 @@ function game() {
         console.log(player);
         console.log(computer);
         // console.log(round);
-        // }
     } 
 } 
+
+// function roundNumber() {
+
+// }
 
 let play = document.getElementById('play');
 
