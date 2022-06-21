@@ -94,8 +94,12 @@ function game() {
 // }
 
 let play = document.getElementById('play');
+let currentRoundNumber = 0;
 
 play.addEventListener('click', function() {
+    currentRoundNumber++;
+    document.querySelector('#round').innerHTML = currentRoundNumber;
+    console.log(currentRoundNumber);
     let startGame = game();
     return startGame;
 })
