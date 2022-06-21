@@ -79,7 +79,6 @@ function game() {
         round += i;
         // document.getElementById('round').innerHTML = round;
         // document.getElementById('score').innerHTML = currentRound;
-        // const result = document.getElementById("result").innerHTML = playRound(playerSelection, computerSelection);
         document.getElementById("result").innerHTML = currentRound;
         const computer = document.getElementById("computer").innerHTML = 'Computer = ' + computerSelection;
         const player = document.getElementById("player").innerHTML = 'Player = ' + playerSelection;
